@@ -1,10 +1,18 @@
 //
 // tringular numbers
 //
+function fibonacci(num){
+     var a = 1, e = 0, temp;
 
-let fn = n => {
-    for(let s=1,k=1; k<n+1; k++,s+=k)
-	console.log(s)
+     while (num >= 0){
+         temp = a;
+         a = a + e;
+         e = temp;
+         num--;
+     }
+
+
+     return e;
 }
 
-fn(4)
+fibonacci
